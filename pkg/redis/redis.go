@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/kainguyen/goodie-api/pkg/logger"
+	"github.com/HoangQuan74/goodie-api/pkg/logger"
 	"github.com/redis/go-redis/v9"
 	"go.uber.org/zap"
 )

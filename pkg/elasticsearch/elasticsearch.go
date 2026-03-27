@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/elastic/go-elasticsearch/v8"
-	"github.com/kainguyen/goodie-api/pkg/logger"
+	"github.com/HoangQuan74/goodie-api/pkg/logger"
 	"go.uber.org/zap"
 )
 

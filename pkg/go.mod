@@ -1,4 +1,4 @@
-module github.com/kainguyen/goodie-api/pkg
+module github.com/HoangQuan74/goodie-api/pkg
 
 go 1.25.0
 

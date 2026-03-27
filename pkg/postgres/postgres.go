@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"github.com/jackc/pgx/v5/pgxpool"
-	"github.com/kainguyen/goodie-api/pkg/logger"
+	"github.com/HoangQuan74/goodie-api/pkg/logger"
 	"go.uber.org/zap"
 )
 

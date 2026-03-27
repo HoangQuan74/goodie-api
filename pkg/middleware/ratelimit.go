@@ -6,8 +6,8 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
-	apperrors "github.com/kainguyen/goodie-api/pkg/errors"
-	"github.com/kainguyen/goodie-api/pkg/response"
+	apperrors "github.com/HoangQuan74/goodie-api/pkg/errors"
+	"github.com/HoangQuan74/goodie-api/pkg/response"
 	"github.com/redis/go-redis/v9"
 )
 

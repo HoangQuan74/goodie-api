@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/kainguyen/goodie-api/pkg/logger"
+	"github.com/HoangQuan74/goodie-api/pkg/logger"
 	"github.com/segmentio/kafka-go"
 	"go.uber.org/zap"
 )

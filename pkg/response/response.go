@@ -4,7 +4,7 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	apperrors "github.com/kainguyen/goodie-api/pkg/errors"
+	apperrors "github.com/HoangQuan74/goodie-api/pkg/errors"
 )
 
 type Response struct {

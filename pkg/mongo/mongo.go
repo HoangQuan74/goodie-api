@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/kainguyen/goodie-api/pkg/logger"
+	"github.com/HoangQuan74/goodie-api/pkg/logger"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 	"go.uber.org/zap"

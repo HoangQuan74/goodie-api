@@ -12,8 +12,8 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/gorilla/websocket"
-	"github.com/kainguyen/goodie-api/pkg/logger"
-	"github.com/kainguyen/goodie-api/services/websocket/config"
+	"github.com/HoangQuan74/goodie-api/pkg/logger"
+	"github.com/HoangQuan74/goodie-api/services/websocket/config"
 	"go.uber.org/zap"
 )
 

@@ -4,9 +4,9 @@ import (
 	"strings"
 
 	"github.com/gin-gonic/gin"
-	"github.com/kainguyen/goodie-api/pkg/auth"
-	apperrors "github.com/kainguyen/goodie-api/pkg/errors"
-	"github.com/kainguyen/goodie-api/pkg/response"
+	"github.com/HoangQuan74/goodie-api/pkg/auth"
+	apperrors "github.com/HoangQuan74/goodie-api/pkg/errors"
+	"github.com/HoangQuan74/goodie-api/pkg/response"
 )
 
 const (

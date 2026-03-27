@@ -10,14 +10,14 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
-	"github.com/kainguyen/goodie-api/pkg/kafka"
-	"github.com/kainguyen/goodie-api/pkg/logger"
-	"github.com/kainguyen/goodie-api/pkg/middleware"
-	"github.com/kainguyen/goodie-api/pkg/mongo"
-	"github.com/kainguyen/goodie-api/pkg/postgres"
-	pkgredis "github.com/kainguyen/goodie-api/pkg/redis"
-	"github.com/kainguyen/goodie-api/pkg/validator"
-	"github.com/kainguyen/goodie-api/services/merchant/config"
+	"github.com/HoangQuan74/goodie-api/pkg/kafka"
+	"github.com/HoangQuan74/goodie-api/pkg/logger"
+	"github.com/HoangQuan74/goodie-api/pkg/middleware"
+	"github.com/HoangQuan74/goodie-api/pkg/mongo"
+	"github.com/HoangQuan74/goodie-api/pkg/postgres"
+	pkgredis "github.com/HoangQuan74/goodie-api/pkg/redis"
+	"github.com/HoangQuan74/goodie-api/pkg/validator"
+	"github.com/HoangQuan74/goodie-api/services/merchant/config"
 	"go.uber.org/zap"
 )
 

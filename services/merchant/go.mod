@@ -1,10 +1,10 @@
-module github.com/kainguyen/goodie-api/services/merchant
+module github.com/HoangQuan74/goodie-api/services/merchant
 
 go 1.25.0
 
 require (
+	github.com/HoangQuan74/goodie-api/pkg v0.0.0
 	github.com/gin-gonic/gin v1.12.0
-	github.com/kainguyen/goodie-api/pkg v0.0.0
 	go.uber.org/zap v1.27.1
 )
 
@@ -63,4 +63,4 @@ require (
 	google.golang.org/protobuf v1.36.10 // indirect
 )
 
-replace github.com/kainguyen/goodie-api/pkg => ../../pkg
+replace github.com/HoangQuan74/goodie-api/pkg => ../../pkg

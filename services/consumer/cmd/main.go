@@ -8,12 +8,12 @@ import (
 	"sync"
 	"syscall"
 
-	"github.com/kainguyen/goodie-api/pkg/kafka"
-	"github.com/kainguyen/goodie-api/pkg/logger"
-	"github.com/kainguyen/goodie-api/pkg/mongo"
-	"github.com/kainguyen/goodie-api/pkg/postgres"
-	pkgredis "github.com/kainguyen/goodie-api/pkg/redis"
-	"github.com/kainguyen/goodie-api/services/consumer/config"
+	"github.com/HoangQuan74/goodie-api/pkg/kafka"
+	"github.com/HoangQuan74/goodie-api/pkg/logger"
+	"github.com/HoangQuan74/goodie-api/pkg/mongo"
+	"github.com/HoangQuan74/goodie-api/pkg/postgres"
+	pkgredis "github.com/HoangQuan74/goodie-api/pkg/redis"
+	"github.com/HoangQuan74/goodie-api/services/consumer/config"
 	kafkago "github.com/segmentio/kafka-go"
 	"go.uber.org/zap"
 )

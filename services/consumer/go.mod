@@ -1,9 +1,9 @@
-module github.com/kainguyen/goodie-api/services/consumer
+module github.com/HoangQuan74/goodie-api/services/consumer
 
 go 1.25.0
 
 require (
-	github.com/kainguyen/goodie-api/pkg v0.0.0
+	github.com/HoangQuan74/goodie-api/pkg v0.0.0
 	github.com/segmentio/kafka-go v0.4.50
 	go.uber.org/zap v1.27.1
 )
@@ -32,4 +32,4 @@ require (
 	golang.org/x/text v0.35.0 // indirect
 )
 
-replace github.com/kainguyen/goodie-api/pkg => ../../pkg
+replace github.com/HoangQuan74/goodie-api/pkg => ../../pkg

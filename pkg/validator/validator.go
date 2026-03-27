@@ -6,7 +6,7 @@ import (
 
 	"github.com/gin-gonic/gin/binding"
 	"github.com/go-playground/validator/v10"
-	apperrors "github.com/kainguyen/goodie-api/pkg/errors"
+	apperrors "github.com/HoangQuan74/goodie-api/pkg/errors"
 )
 
 func Init() {

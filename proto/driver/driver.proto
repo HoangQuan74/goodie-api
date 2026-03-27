@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package driver;
 
-option go_package = "github.com/kainguyen/goodie-api/proto/driver";
+option go_package = "github.com/HoangQuan74/goodie-api/proto/driver";
 
 import "google/protobuf/timestamp.proto";
 
