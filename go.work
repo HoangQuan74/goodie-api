@@ -1,0 +1,10 @@
+go 1.25.0
+
+use (
+	./pkg
+	./services/admin
+	./services/client
+	./services/consumer
+	./services/merchant
+	./services/websocket
+)

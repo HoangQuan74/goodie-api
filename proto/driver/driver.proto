@@ -1,0 +1,66 @@
+syntax = "proto3";
+
+package driver;
+
+option go_package = "github.com/kainguyen/goodie-api/proto/driver";
+
+import "google/protobuf/timestamp.proto";
+
+service DriverService {
+  rpc FindNearestDriver(FindNearestDriverRequest) returns (FindNearestDriverResponse);
+  rpc GetDriverLocation(GetDriverLocationRequest) returns (DriverLocationResponse);
+  rpc UpdateDriverLocation(UpdateDriverLocationRequest) returns (UpdateDriverLocationResponse);
+  rpc AssignOrder(AssignOrderRequest) returns (AssignOrderResponse);
+}
+
+message FindNearestDriverRequest {
+  double lat = 1;
+  double lng = 2;
+  double radius_km = 3;
+  int32 limit = 4;
+}
+
+message FindNearestDriverResponse {
+  repeated DriverInfo drivers = 1;
+}
+
+message DriverInfo {
+  string driver_id = 1;
+  string full_name = 2;
+  string phone = 3;
+  double lat = 4;
+  double lng = 5;
+  double distance_km = 6;
+  double avg_rating = 7;
+  bool is_available = 8;
+}
+
+message GetDriverLocationRequest {
+  string driver_id = 1;
+}
+
+message DriverLocationResponse {
+  string driver_id = 1;
+  double lat = 2;
+  double lng = 3;
+  google.protobuf.Timestamp updated_at = 4;
+}
+
+message UpdateDriverLocationRequest {
+  string driver_id = 1;
+  double lat = 2;
+  double lng = 3;
+}
+
+message UpdateDriverLocationResponse {
+  bool success = 1;
+}
+
+message AssignOrderRequest {
+  string order_id = 1;
+  string driver_id = 2;
+}
+
+message AssignOrderResponse {
+  bool success = 1;
+}

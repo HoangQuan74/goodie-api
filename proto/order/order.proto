@@ -1,0 +1,100 @@
+syntax = "proto3";
+
+package order;
+
+option go_package = "github.com/kainguyen/goodie-api/proto/order";
+
+import "google/protobuf/timestamp.proto";
+
+service OrderService {
+  rpc CreateOrder(CreateOrderRequest) returns (OrderResponse);
+  rpc GetOrderDetail(GetOrderDetailRequest) returns (OrderResponse);
+  rpc GetOrdersByUser(GetOrdersByUserRequest) returns (OrderListResponse);
+  rpc GetOrdersByStore(GetOrdersByStoreRequest) returns (OrderListResponse);
+  rpc UpdateOrderStatus(UpdateOrderStatusRequest) returns (OrderResponse);
+  rpc CancelOrder(CancelOrderRequest) returns (OrderResponse);
+}
+
+message CreateOrderRequest {
+  string user_id = 1;
+  string store_id = 2;
+  repeated OrderItemRequest items = 3;
+  string delivery_address = 4;
+  double delivery_lat = 5;
+  double delivery_lng = 6;
+  string note = 7;
+  string voucher_code = 8;
+  string payment_method = 9; // cod, ewallet, credit_card
+}
+
+message OrderItemRequest {
+  string menu_item_id = 1;
+  int32 quantity = 2;
+  repeated string option_ids = 3;
+  string note = 4;
+}
+
+message GetOrderDetailRequest {
+  string order_id = 1;
+}
+
+message GetOrdersByUserRequest {
+  string user_id = 1;
+  int32 page = 2;
+  int32 per_page = 3;
+  string status = 4; // optional filter
+}
+
+message GetOrdersByStoreRequest {
+  string store_id = 1;
+  int32 page = 2;
+  int32 per_page = 3;
+  string status = 4;
+}
+
+message UpdateOrderStatusRequest {
+  string order_id = 1;
+  string status = 2; // pending, confirmed, preparing, ready, picked_up, delivered, cancelled
+}
+
+message CancelOrderRequest {
+  string order_id = 1;
+  string reason = 2;
+}
+
+message OrderResponse {
+  string id = 1;
+  string user_id = 2;
+  string store_id = 3;
+  string driver_id = 4;
+  string status = 5;
+  double subtotal = 6;
+  double delivery_fee = 7;
+  double discount = 8;
+  double total = 9;
+  string delivery_address = 10;
+  double delivery_lat = 11;
+  double delivery_lng = 12;
+  string note = 13;
+  string voucher_code = 14;
+  int32 estimated_time = 15; // minutes
+  repeated OrderItemResponse items = 16;
+  google.protobuf.Timestamp created_at = 17;
+  google.protobuf.Timestamp updated_at = 18;
+}
+
+message OrderItemResponse {
+  string id = 1;
+  string menu_item_id = 2;
+  string menu_item_name = 3;
+  int32 quantity = 4;
+  double unit_price = 5;
+  double subtotal = 6;
+  string options = 7; // JSON
+  string note = 8;
+}
+
+message OrderListResponse {
+  repeated OrderResponse orders = 1;
+  int64 total = 2;
+}

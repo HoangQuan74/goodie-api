@@ -1,0 +1,59 @@
+syntax = "proto3";
+
+package user;
+
+option go_package = "github.com/kainguyen/goodie-api/proto/user";
+
+import "google/protobuf/timestamp.proto";
+
+service UserService {
+  rpc GetUserByID(GetUserByIDRequest) returns (UserResponse);
+  rpc GetUserByEmail(GetUserByEmailRequest) returns (UserResponse);
+  rpc ValidateToken(ValidateTokenRequest) returns (ValidateTokenResponse);
+  rpc CreateUser(CreateUserRequest) returns (UserResponse);
+  rpc UpdateUserStatus(UpdateUserStatusRequest) returns (UserResponse);
+}
+
+message GetUserByIDRequest {
+  string user_id = 1;
+}
+
+message GetUserByEmailRequest {
+  string email = 1;
+}
+
+message ValidateTokenRequest {
+  string token = 1;
+}
+
+message ValidateTokenResponse {
+  bool valid = 1;
+  string user_id = 2;
+  string role = 3;
+}
+
+message CreateUserRequest {
+  string email = 1;
+  string phone = 2;
+  string password = 3;
+  string full_name = 4;
+  string role = 5;
+}
+
+message UpdateUserStatusRequest {
+  string user_id = 1;
+  string status = 2; // active, inactive, banned
+}
+
+message UserResponse {
+  string id = 1;
+  string email = 2;
+  string phone = 3;
+  string full_name = 4;
+  string role = 5;
+  string status = 6;
+  string avatar_url = 7;
+  bool is_verified = 8;
+  google.protobuf.Timestamp created_at = 9;
+  google.protobuf.Timestamp updated_at = 10;
+}
